@@ -7,6 +7,8 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
+import os
+
 BOT_NAME = "core"
 
 SPIDER_MODULES = ["core.spiders"]
@@ -68,6 +70,7 @@ SPIDER_MIDDLEWARES = {
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     "core.pipelines.ValidationPipeline": 300,
+    "core.pipelines.MySQLPipeline": 400
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -95,3 +98,9 @@ ITEM_PIPELINES = {
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 # TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+# Configure the database settings
+MYSQL_HOST = os.environ.get("DATABASE_HOST", 'database-service')
+MYSQL_USER = os.environ.get("DATABASE_USER", 'username')
+MYSQL_PASSWORD = os.environ.get("DATABASE_PASSWORD", 'password')
+MYSQL_DB = os.environ.get("DATABASE_NAME", 'database')
