@@ -2,8 +2,6 @@
 
 - [Description](#description)
 - [Getting started](#getting-started)
-  - [Container](#container)
-    - [Usage](#usage)
 
 ## Description
 This project is a scraper of the website https://www.wbcsd.org.
