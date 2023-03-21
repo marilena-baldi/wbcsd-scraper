@@ -1,7 +1,9 @@
 # Wbcsd scraper
 
 - [Description](#description)
-
+- [Getting started](#getting-started)
+  - [Container](#container)
+    - [Usage](#usage)
 
 ## Description
 This project is a scraper of the website https://www.wbcsd.org.
@@ -17,3 +19,22 @@ to extract course information related to:
 - publication date
 - tags
 
+## Getting started
+
+To get started place in the project folder and type:
+
+```sh
+make build  # to build all docker containers
+```
+
+Then, to start the scraper:
+```sh
+make up  # to run the containers
+
+make tail  # to tail on the logs
+```
+
+To stop type:
+```sh
+make down
+```
