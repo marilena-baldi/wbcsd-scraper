@@ -25,3 +25,6 @@ tail: ## Tail container's logs
 
 shell: ## Run shell in container
 	@${DOCKER_COMPOSE} run --rm ${SERVICE_NAME} bash
+
+test: ## Run unit tests
+	@${DOCKER_COMPOSE} run --rm -e TEST=True ${SERVICE_NAME} sh -c "scrapy crawl wbcsd && python3 -m unittest"

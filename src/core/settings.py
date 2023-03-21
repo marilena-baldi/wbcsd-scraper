@@ -42,11 +42,15 @@ ROBOTSTXT_OBEY = True
 #    "Accept-Language": "en",
 #}
 
+# Enable or disable autounit
+AUTOUNIT_ENABLED = True
+
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-#SPIDER_MIDDLEWARES = {
-#    "core.middlewares.CoreSpiderMiddleware": 543,
-#}
+SPIDER_MIDDLEWARES = {
+    # "core.middlewares.CoreSpiderMiddleware": 543,
+    'scrapy_autounit.AutounitMiddleware': 950
+}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
@@ -89,5 +93,5 @@ ROBOTSTXT_OBEY = True
 
 # Set settings whose default value is deprecated to a future-proof value
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
-TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
+# TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"

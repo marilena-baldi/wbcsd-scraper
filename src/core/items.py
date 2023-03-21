@@ -11,4 +11,3 @@ class CourseItem(scrapy.Item):
     image_url = scrapy.Field()
     publication_date = scrapy.Field()
     tags = scrapy.Field()
-

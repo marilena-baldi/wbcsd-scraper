@@ -1,1 +1,2 @@
 scrapy==2.8.0
+scrapy-autounit==0.0.32
