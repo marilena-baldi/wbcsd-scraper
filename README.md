@@ -32,7 +32,15 @@ make up  # to run the containers
 make tail  # to tail on the logs
 ```
 
+Once the scraper is done, you can visit http://localhost:8889/ to access the database table with
+the extracted data.
+
 To stop type:
 ```sh
 make down
+```
+
+To run the tests:
+```sh
+make test
 ```
