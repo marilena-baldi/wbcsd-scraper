@@ -10,6 +10,11 @@ services:
     depends_on:
       database-service:
         condition: service_healthy
+    environment:
+      - DATABASE_HOST=${DATABASE_HOST}
+      - DATABASE_USER=${DATABASE_USER}
+      - DATABASE_PASSWORD=${DATABASE_PASSWORD}
+      - DATABASE_NAME=${DATABASE_NAME}
 
   database-service:
     image: mysql:8.0

@@ -45,7 +45,7 @@ ROBOTSTXT_OBEY = True
 #}
 
 # Enable or disable autounit
-AUTOUNIT_ENABLED = True
+AUTOUNIT_ENABLED = False if os.environ.get("TEST", "False") == "False" else True
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
